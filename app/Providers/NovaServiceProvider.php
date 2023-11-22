@@ -117,7 +117,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                                 'resources' => [
                                  
                                     // \App\Nova\Anhtt::class,
-                                    // \App\Nova\Banner::class,
+                                    \App\Nova\Hoidap::class,
                                     \App\Nova\thuvienanh::class,
                                     \App\Nova\Lienketwebsite::class,
 
