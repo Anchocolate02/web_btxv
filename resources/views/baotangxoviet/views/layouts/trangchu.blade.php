@@ -382,9 +382,37 @@
                 </div>
             </div>
         </div>
+        <div id="scrollToTopBtn" class="hidden" onclick="scrollToTop()">
+            <i class="fa fa-angle-up items-center"></i>
+        </div>
     </footer>
 
     <!-- JSSS -->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            const scrollDuration = 700; // Thời gian cuộn lên đầu trang (ms)
+            const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+            const scrollInterval = setInterval(function () {
+                if (window.scrollY !== 0) {
+                    window.scrollBy(0, scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 15);
+        }
+
+    </script>
     <script>
         const searchTrigger =
             document.querySelectorAll(".search-trigger");

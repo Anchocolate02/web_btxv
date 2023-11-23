@@ -820,3 +820,36 @@ h3.title-follow-footer {
   margin-left: 10px;
 }
 
+#scrollToTopBtn {
+  box-shadow: 0 2px 3px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.15);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2e2e2e;
+  border: none;
+  z-index: 999;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  
+}
+
+#scrollToTopBtn:hover {
+  background-color: #f13030;
+}
+
+
+
+#scrollToTopBtn i {
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 11px;
+  font-weight: 900;
+}

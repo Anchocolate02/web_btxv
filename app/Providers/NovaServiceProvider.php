@@ -102,7 +102,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                                     \App\Nova\Hosochiensi::class,
                                     \App\Nova\Thoikihoatdong::class,
                                     \App\Nova\Camtuong::class,
-                                    // \App\Nova\User::class,
+                                    \App\Nova\User::class,
                                     \App\Nova\Loaidanhmuc::class,
 
 
