@@ -50,10 +50,3 @@ Route::get('/post-child/{danhmuc}', [BaotangController::class, 'postFromMenu'])-
 // Crawler Data 
 Route::get('/craw-data', [CrawlerController::class, 'index'])->name('baotangxoviet.posts.post_child');
 Route::get('/craw-data1', [CrawlerController::class, 'index1'])->name('baotangxoviet.posts.post_child1');
-
-
-
-
-
-
-

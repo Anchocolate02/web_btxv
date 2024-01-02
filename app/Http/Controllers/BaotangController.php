@@ -23,20 +23,19 @@ class BaotangController extends Controller
 
         $slide = Thuvienanh::orderBy('id', 'asc')->take(4)->get();
        
-        $excludedIds = $slide->pluck('id'); // Lấy danh sách ID từ biến $slide
-        $records = Thuvienanh::whereNotIn('id', $excludedIds)->take(4)->get();
+        // $excludedIds = $slide->pluck('id'); 
+        // $records = Thuvienanh::whereNotIn('id', $excludedIds)->take(4)->get();
         
-        $suutaphv = Post::where('category_id', 53)->orderBy('id', 'desc')->first();
         $video = Video::orderBy('id', 'desc')->first();
 
+        $suutaphv = Post::where('category_id', 53)->orderBy('id', 'desc')->first();
         $Posts_idsuutaphv = [];
         $Posts_idsuutaphv[] = $suutaphv->id;
         $suutaphvs = Post::whereNotIn('id', $Posts_idsuutaphv)->where('category_id', '=', 53)->orderBy('id', 'desc')->take(4)->get();
 
 
+        
         $ditich = Post::where('category_id', 40)->orderBy('id', 'asc')->first();
-        // return $toadam;
-
         $Posts_idditich = [];
         $Posts_idditich[] = $ditich->id;
         $ditichs = Post::whereNotIn('id', $Posts_idditich)->where('category_id', '=', 40)->orderBy('id', 'asc')->take(3)->get();
@@ -100,7 +99,7 @@ class BaotangController extends Controller
             'tintucnoibat' => $tintucnoibat,
             'tintucmoi' => $tintucmoi,
 
-            'records' => $records,
+            // 'records' => $records,
 
 
 
