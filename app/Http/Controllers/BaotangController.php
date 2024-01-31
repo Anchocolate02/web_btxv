@@ -288,6 +288,8 @@ class BaotangController extends Controller
     public function timkiem(Request $request)
     {
         $baiganday = Post::orderBy('id', 'asc')->take(3)->get();
+        $video = Video::orderBy('id', 'desc')->first();
+        
 
         $timkiem = $request->input('search');
         $baigandays = $baiganday->pluck('id')->toArray();
@@ -298,6 +300,7 @@ class BaotangController extends Controller
 
         return view('baotangxoviet.posts.searchpost', [
             'timkiem' => $timkiem,
+            'video' => $video,
             'baiganday' => $baiganday,
             'baigandays' => $baigandays,
             'baixemnhieunhat' => $baixemnhieunhat,

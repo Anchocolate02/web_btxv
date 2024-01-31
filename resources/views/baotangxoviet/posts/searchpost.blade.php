@@ -114,8 +114,9 @@
                 </div>
             </div>
             <div class="box-video">
-                <h3 class="bg-red-600 fix-title text-white text-center rounded-t-sm">Video </h3>
-                <iframe width="400" height="200" src="https://www.youtube.com/embed/Sh6Ub_B8H7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                @if($video) <h3 class="bg-red-600 fix-title text-white text-center rounded-t-sm">Video </h3>
+                <iframe width="400" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                @endif
             </div>
 
             <div class="col-span-12 mt-5 ">
@@ -147,7 +148,7 @@
         <div class="col-span-8 ml-5">
             <div class="content  border-l" v-for="post in post">
                 <h3 class="fix-title font-bold text-2xl mb-3 "><a :href="'/chi-tiet-bai-viet/'+post.slug">@{{post.title}}</a></h3>
-                <img class="mx-auto" :src="post.thumbnail ? '/storage/' + post.thumbnail : '/storage/default-thumbnail.jpg'" alt="" style="height:350px; width:60%">
+                <img class="mx-auto" :src="post.thumbnail ? '/storage/' + post.thumbnail : '/images/noimg.jpg'" alt="" style="height:350px; width:60%">
 
 
                 <p class="para fix-para cut-para">@{{post.excerpt}}</p>
