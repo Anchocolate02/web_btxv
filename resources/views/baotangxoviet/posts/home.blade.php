@@ -187,7 +187,7 @@
                                         <span class="text-container text-base font-medium text-black text-justify">{{$dncmss->title}}</span>
                                     </a>
                                     <a href="/chi-tiet-bai-viet/{{$dncmss->slug}}">
-                                        <span class="text-container text-sm font-medium text-gray-600 text-justify mb-4">{!! $dncmss->content !!}</span>
+                                        <span class="text-container text-sm font-medium text-gray-600 text-justify mb-4">{!! $dncmss->excerpt !!}</span>
                                     </a>
                                 </div>
                                 @endforeach
