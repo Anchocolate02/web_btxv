@@ -225,7 +225,7 @@
 
                 <!-- Mobile menu icon -->
                 <button id="mobile-icon" class="lg:hidden fixed">
-                    <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+                    <i onclick="changeIcon(this)" class="fa-solid fa-bars" style="color: #fbfbfb; margin-left: -20px;"></i>
                 </button>
             </div>
 
@@ -287,10 +287,10 @@
                         </div>
                         <div class="sm:col-span-4 col-span-12 mt-5">
                             <div class="follow-footer">
-                                <div class="museum-tripadvisor">
-                                    <a href="" target="_blank">
+                                <div class="museum-tripadvisor mt-[100px]">
+                                    <!-- <a href="" target="_blank">
                                         <img src="./images/vct.jpg" alt="" style="height: 150px"/>
-                                    </a>
+                                    </a> -->
                                 </div>
                                 <h3 class="title-follow-footer text-gray-500">
                                     Theo dõi chúng tôi
@@ -305,12 +305,12 @@
 
                 
                         </div>
-                        <div class="sm:col-span-4 col-span-12 px-3   dark:bg-gray-800 sm:rounded-lg sm:block hidden ml-10">
+                        <div class="sm:col-span-4 col-span-12 px-3   dark:bg-gray-800 sm:rounded-lg  ml-10">
                             <div class="card ">
                                 <!-- <h5 class="card-title fix-title text-center font-weight-bold text-danger">
                                         Bản đồ </h5> -->
                                 <div class="mt-5">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8260164523394!2d105.66676880985801!3d18.671801764465872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce66654d5451%3A0xbf080c1b58101bca!2zQuG6o28gdMOgbmcgWMO0IFZp4bq_dCBOZ2jhu4cgVMSpbmg!5e0!3m2!1svi!2s!4v1690445648852!5m2!1svi!2s" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <iframe class="ml-[-82px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.8260164523394!2d105.66676880985801!3d18.671801764465872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce66654d5451%3A0xbf080c1b58101bca!2zQuG6o28gdMOgbmcgWMO0IFZp4bq_dCBOZ2jhu4cgVMSpbmg!5e0!3m2!1svi!2s!4v1690445648852!5m2!1svi!2s" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
 
                             </div>

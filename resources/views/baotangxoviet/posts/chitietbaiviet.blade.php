@@ -131,8 +131,17 @@
                 <iframe width="400" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 @endif    
             </div>
+            <style>
+                @media (min-width: 768px) and (max-width: 1024px) 
+                {
+                    .box-video iframe {
+                        width: 100%;
+                        height: 500px;
+                    }
+                }
+            </style>
         </div>
-        <div class="sm:col-span-8 sm:mt-0 col-span-12 mt-5">
+        <div class="lg:col-span-8 md:col-span-12 sm:col-span-8 col-span-12 mx-4">    
             
             <div class="content  border-l">          
             @if($chitietbaiviet)    
