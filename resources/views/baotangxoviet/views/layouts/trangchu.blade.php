@@ -188,7 +188,7 @@
                     <li class="flex relative group text-white">
                         <a href="/danh-muc/{{$dm['slug']}}" class="mr-1">{{$dm['label']}}</a>
                         @if($dm['kiemtra'] == 1)
-                        <i class="fa-solid fa-chevron-down fa-2xs pt-3"></i>
+                        <i class=" pt-3"></i>
                         <!-- Submenu starts -->
                         <ul class="start-hov z-50 absolute item-list p-3 w-52 top-6 transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out origin-top shadow-lg  mt-5">
                             @foreach($dm['children'] as $dmc)
@@ -231,91 +231,28 @@
 
             <!-- Mobile menu -->
             <div class="md:hidden flex justify-center mt-3 w-full">
-                <div id="mobile-menu" class="mobile-menu absolute top-23 w-full">
+                <div id="mobile-menu" class="!z-30 mobile-menu absolute top-23 w-full">
                     <!-- add hidden here later -->
                     <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-auto mt-5">
                         <li class="border-b-2 border-t-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                            <a href="https://google.com" class="block pl-7 text-white">Trang chủ</a>
+                            <a href="/" class="block pl-7 text-white">Trang chủ</a>
                         </li>
+                        @foreach($danhmuc as $dm)
                         <li class="border-b-2 border-white hover:text-white">
-                            <a href="#" class="block pl-11 text-white">Giới thiệu <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i></a>
+                            <a href="/danh-muc/{{$dm['slug']}}" class="block pl-11 text-white">{{$dm['label']}}<i class=" pt-4"></i></a>
 
                             <!-- Submenu starts -->
+                            @if($dm['kiemtra'] == 1)
                             <ul class="bg-white text-gray-800 w-full">
+                                @foreach($dm['children'] as $dmc)
                                 <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Lời chào của Bảo tàng Xô Viết Nghệ Tĩnh</a>
+                                    <a class="block pl-16 text-white" href="/danh-muc/{{$dmc['slug']}}">{{$dmc  ['label']}}</a>
                                 </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Chức năng nhiệm vụ của Bảo tàng Xô Viết Nghệ Tĩnh</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Quá trình hình thành và phát triển của Bảo tàng Xô Viết Nghệ Tĩnh</a>
-                                </li>
+                                @endforeach
                             </ul>
+                            @endif
                             <!-- Submenu ends -->
-                        </li>
-                        <li class="border-b-2 border-white hover:text-white">
-                            <a href="/bai-viet" class="block pl-11 text-white">Tin tức <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i></a>
-
-                            <!-- Submenu starts -->
-                            <ul class="bg-white text-gray-800 w-full">
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tin hoạt động</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tin trong nước</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tin nước ngoài</a>
-                                </li>
-                            </ul>
-                            <!-- Submenu ends -->
-                        </li>
-
-                        <li class="border-b-2 border-white hover:text-white">
-                            <a href="#" class="block pl-11 text-white">Hệ thống trưng bày <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i></a>
-
-                            <!-- Submenu starts -->
-                            <ul class="bg-white text-gray-800 w-full">
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Các phòng trưng bày</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Sưu tập hiện vật</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tin trong nước</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tin nước ngoài</a>
-                                </li>
-                            </ul>
-                            <!-- Submenu ends -->
-                        </li>
-
-                        <li class="border-b-2 border-white hover:text-white">
-                            <a href="#" class="block pl-11 text-white">Nghiên cứu khoa học <i class="fa-solid fa-chevron-down fa-2xs pt-4"></i></a>
-
-                            <!-- Submenu starts -->
-                            <ul class="bg-white text-gray-800 w-full">
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Tọa đàm</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Hội thảo</a>
-                                </li>
-                                <li class="text-sm leading-8 font-normal hover:bg-slate-200">
-                                    <a class="block pl-16 text-white" href="#">Chuyên đề</a>
-                                </li>
-                            </ul>
-                            <!-- Submenu ends -->
-                        </li>
-                        <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                            <a href="#" class="block pl-7 text-white">Công khai tài chính</a>
-                        </li>
-                        <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4">
-                            <a href="#" class="block pl-7 text-white">Liên hệ</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

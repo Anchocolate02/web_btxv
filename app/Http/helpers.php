@@ -12,6 +12,7 @@ use App\Models\Danhmuc;
             $t['id'] = $dm->id;
             $t['label'] = $dm->name;
             $t['slug'] = $dm->slug; 
+            $t['language'] = $dm->language; 
             $t['loaidanhmuc_id'] = $dm->loaidanhmuc_id;
             $t['parent_id'] = $dm->parent_id;
             $t['children'] = [];

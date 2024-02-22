@@ -85,7 +85,7 @@
     </nav>
 
     <div class="grid grid-cols-12 mt-10">
-        <div class="col-span-4">
+        <div class="sm:col-span-4 col-span-12">
             <div class="search-bar">
                 <div class="mb-3">
                     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -164,13 +164,13 @@
 
                 </div>
             </div>
-            <div class="box-video">
+            <div class="box-video  sm:block hidden">
                 @if($video) <h3 class="bg-red-600 fix-title text-white text-center rounded-t-sm">Video </h3>
                 <iframe width="400" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 @endif
             </div>
 
-            <div class="col-span-12 mt-5 ">
+            <div class="col-span-12 mt-5  sm:block hidden">
                 <h3 class=" pb-2.5">
                     <a href="" class="icon leading-10 uppercase text-black relative font-medium pl-3.5 text-xl no-underline">Liên
                         kết website</a>
@@ -196,7 +196,7 @@
             </div>
 
         </div>
-        <div class="col-span-8 ml-5">
+        <div class="sm:col-span-8 col-span-12 mx-4">
 
 
             <div class="content  border-l">
@@ -212,9 +212,9 @@
 
 
                     @if($post['thumbnail'] == null)
-                    <img class="mx-auto" src="/images/noimg.jpg" alt="{{$post->title}}" id="imghot" style="height:350px; width:60%">
+                    <img class="mx-auto" src="/images/noimg.jpg" alt="{{$post->title}}" id="imghot" style="height:350px; width:100%">
                     @else
-                    <img class="mx-auto" src="/storage/{{$post->thumbnail}}" alt="" style="height:350px; width:60%">
+                    <img class="mx-auto" src="/storage/{{$post->thumbnail}}" alt="" style="height:350px; width:100%">
                     @endif
                     <span class="fix-para block my-3 pb-5 border-b"> <i class="fa-solid fa-user"></i> Người đăng: admin Ngày
                         {{$post->created_at}}</span>

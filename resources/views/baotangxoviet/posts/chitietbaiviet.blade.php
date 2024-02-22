@@ -44,7 +44,7 @@
     </nav>
 
     <div class="grid grid-cols-12 mt-10">
-        <div class="col-span-4">
+        <div class="lg:col-span-4 md:col-span-12 sm:col-span-4 col-span-12">
             <div class="search-bar">
                 <div class="mb-3">
                     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -125,14 +125,14 @@
 
                 </div>
             </div>
-            <div class="box-video">
+            <div class="box-video sm:block hidden">
                 @if($video)
                 <h3 class="bg-red-600 fix-title text-white text-center rounded-t-sm">Video </h3>
                 <iframe width="400" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 @endif    
             </div>
         </div>
-        <div class="col-span-8 ml-5">
+        <div class="sm:col-span-8 sm:mt-0 col-span-12 mt-5">
             
             <div class="content  border-l">          
             @if($chitietbaiviet)    

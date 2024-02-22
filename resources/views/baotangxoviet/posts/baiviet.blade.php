@@ -3,7 +3,7 @@
 @if($returnv == 0)
 <div id="hura" class=" container1 mx-auto reset ">
     <div class="grid grid-cols-12 mt-10">
-        <div class="col-span-4">
+        <div class="sm:col-span-4 col-span-12">
             <div class="search-bar">
                 <div class="mb-3">
                     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -114,7 +114,7 @@
             </div>
 
         </div>
-        <div class="col-span-8 ml-5">
+        <div class="sm:col-span-8 col-span-12 ml-5">
             <div class="border border-cyan-300 text-center font-normal text-lg">
                 <p>Nội dung đang được cập nhật</p>
                 <p>Mời bạn quay lại lần sau</p>
@@ -207,7 +207,7 @@
     </nav>
 
     <div class="grid grid-cols-12 mt-10">
-        <div class="col-span-4">
+        <div class="sm:col-span-4 col-span-12">
             <div class="search-bar">
                 <div class="mb-3">
                     <div class="relative mb-4 flex w-full flex-wrap items-stretch">
@@ -288,7 +288,7 @@
             </div>
             <div class="box-video">
                 @if($video) <h3 class="bg-red-600 fix-title text-white text-center rounded-t-sm">Video </h3>
-                <iframe width="400" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="200" src="{{$video->youtube_id}}" title="{{$video->title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 @endif
             </div>
 
@@ -318,15 +318,15 @@
             </div>
 
         </div>
-        <div class="col-span-8 ml-5">
+        <div class="sm:col-span-8 col-span-12 mx-4">
             <div class="content  border-l">
                 @foreach($baiviet as $bv)
                 <h3 class="fix-title font-bold text-2xl mb-3 "><a href="/chi-tiet-bai-viet/{{$bv->slug}}">{{$bv->title}}</a></h3>
 
                 @if($bv->thumbnail == null)
-                <img class="mx-auto" src="/images/noimg.jpg" alt="{{$bv->title}}" id="imghot" style="height:350px; width:60%">
+                <img class="mx-auto" src="/images/noimg.jpg" alt="{{$bv->title}}" id="imghot" style="height:370px; width:100%">
                 @else
-                <img class="mx-auto" src="/storage/{{$bv->thumbnail}}" alt="" style="height:350px; width:60%">
+                <img class="mx-auto" src="/storage/{{$bv->thumbnail}}" alt="" style="height:370px; width:100%">
                 @endif
                 <span class="fix-para block my-3"> <i class="fa-solid fa-user"></i> Người đăng: admin Ngày
                     {{$bv->created_at}}</span>
@@ -342,6 +342,7 @@
 
     </div>
     <div class="mt-3"> {{$baiviets->links()}}</div>
+    
 
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
